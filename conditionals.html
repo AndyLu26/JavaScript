@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<html>
+<body>
+<p><input type = "text" id="textbox1"></p>
+<p><input type = "text" id="textbox2"></p>
+<button onclick="login()">Login</button>
+<button onclick="compare()">Compare</button>
+<button onclick="showDirection()">Direction</button>
+<p id="result"></p>
+<script>
+    function login(){
+        if (textbox1.value == "admin" && textbox2.value == "pass") {
+        result.innerHTML = "Logged in";
+    }
+        else {
+            result.innerHTML ="Incorrect username and password";
+        }   
+     }
+    function compare(){
+        if (Number(textbox1.value.length)>Number(textbox2.value.length)){
+           result.innerHTML ="First is longer"; 
+        }
+        else if (textbox1.value.length<textbox2.value.length){
+            result.innerHTML ="Second is longer"; 
+        }
+        else {
+            result.innerHTML ="Same length"; 
+        }
+    }
+
+</script>
+</body>
+</html>
