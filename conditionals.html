@@ -28,6 +28,30 @@
         }
     }
 
+function directionName(abbrev){
+    switch (abbrev) {
+       case "n":
+        return "North";
+        break;
+    case "s":
+        return "South";
+        break;
+    case "e":
+        return "East";
+        break;
+    case "w":
+         return "West";
+        break;
+    default:
+    return "Somewhere";
+ }
+}
+
+function showDirection(){
+    result.innerHTML ="Go " + directionName(textbox1.value); 
+   
+}
+
 </script>
 </body>
 </html>
